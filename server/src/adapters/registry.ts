@@ -1,3 +1,24 @@
+import * as hermesLocal from "hermes-paperclip-adapter";
+
+import {
+  execute,
+  testEnvironment,
+  detectModel,
+  listSkills,
+  syncSkills,
+  sessionCodec,
+} from "hermes-paperclip-adapter/server";
+
+registry.set("hermes_local", {
+  ...hermesLocal,
+  execute,
+  testEnvironment,
+  detectModel,
+  listSkills,
+  syncSkills,
+  sessionCodec,
+});
+
 import type {
   AdapterModel,
   AdapterModelProfileDefinition,
